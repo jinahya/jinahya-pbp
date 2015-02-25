@@ -21,6 +21,13 @@
       <version>0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>system</groupId>
+      <artifactId>pbp</artifactId>
+      <version>1.1</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/pbp_1.1.jar</systemPath>
+    </dependency>
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
