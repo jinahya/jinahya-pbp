@@ -25,8 +25,7 @@
       <groupId>system</groupId>
       <artifactId>pbp</artifactId>
       <version>1.1</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/lib/pbp_1.1.jar</systemPath>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <properties>
@@ -92,6 +91,30 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>com.googlecode.addjars-maven-plugin</groupId>
+        <artifactId>addjars-maven-plugin</artifactId>
+        <version>1.0.5</version>
+        <executions>
+          <execution>
+            <id>add-jars</id>
+            <goals>
+              <!--<goal>add-jars</goal>-->
+            </goals>
+            <configuration>
+              <resources>
+                <resouce>
+                  <directory>${project.basedir}/lib</directory>
+                  <includes>
+                    <include>pbp_1.1.jar</include>
+                  </includes>
+                  <scope>provided</scope>
+                </resouce>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
